@@ -1,12 +1,15 @@
 import styles from '../App.module.css'
 
-export function NavBar({ showOnlyCompleted, Name }) {
+export function NavBar({ showOnlyCompleted, Name1 ,showOnlyImp,Name2}) {
     return <>
         <div className={styles.todoAppLeft}>
             <button onClick={() => {
                 showOnlyCompleted()
-            }}>{Name}</button>
-            <button>Show only Important tasks</button>
+            }}>{Name1}</button>
+            <button onClick={() => {
+                console.log('yo')
+                showOnlyImp()
+            }}>{ Name2 }</button>
         </div>
     </>
 }

@@ -5,15 +5,18 @@ import { FaStar } from 'react-icons/fa'
 
 
 
-
-export function TodoList({ Todos, setCompleted, deleteTodo }) {
+export function TodoList({ Todos, setCompleted, deleteTodo ,impTodo}) {
     return (
         <div className={styles.todosCont}>
             {Todos.map((Todo) => {
                 let { year, month, date, hour, minutes, timeZone } = Todo.date;
-                return <div className={Todo.status ? styles.completed : styles.todo} onClick={() => setCompleted(Todo.id)} >
-                    <div className={styles.icons}>
-                        <FaStar />
+                return <div className={Todo.status ? `${styles.completed} ${styles.todo}` : styles.todo} onClick={() => setCompleted(Todo.id)} >
+                    <div className={Todo.important ? `${styles.icons} ${styles.imp}`: styles.icons}>
+                        <FaStar onClick={(e) => {
+                            e.stopPropagation();
+                            
+                            impTodo(Todo.id)
+                        }}/>
                     </div>
                     <div className={styles.content}>
                         {Todo.content}

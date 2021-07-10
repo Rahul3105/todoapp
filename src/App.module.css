@@ -1,7 +1,10 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+body {
+  background-color: rgba(12, 226, 172, 0.753);
 }
 .App {
   /* border: 1px solid lime; */
@@ -26,13 +29,16 @@
   width: 55%;
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: white;
+  margin-top: 20px;
+  border-radius: 10px;
 }
 .inputArea {
   width: 90%;
   margin: auto;
-  height:50px;
-  margin-top:10px;
-  margin-bottom:10px
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .inputArea > input {
   height: 100%;
@@ -40,20 +46,27 @@
   padding: 10px;
   font-size: 15px;
   outline: none;
-
+  border: 1px solid orangered;
 }
 .inputArea > button {
   width: 20%;
   height: 102%;
   outline: none;
   font-size: 15px;
+  background-color: orangered;
+  border: none;
+  color: white;
+}
+.inputArea > button:hover {
+  cursor: pointer;
   background-color: white;
-  border: 1px solid rgba(154, 160, 154, 0.63);
+  color: orangered;
+  border: 1px solid orangered;
+  border-left: none;
 }
 .todosCont {
   width: 90%;
   margin: auto;
-
 }
 .todo {
   /* border: 1px solid red; */
@@ -64,14 +77,7 @@
   text-align: left;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.completed { 
-  /* border: 1px solid red; */
-  padding: 10px 5px;
-  text-align: left;
-  display: flex;
-  box-sizing: border-box;
-  margin: 10px 0;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+.completed {
   background-color: rgba(21, 235, 85, 0.685);
 }
 .completed > .content {
@@ -85,20 +91,20 @@
 }
 .dateCont {
   /* border: 1px solid brown; */
-  margin:0 10px;
+  margin: 0 10px;
   width: max-content;
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content:center;
+  justify-content: center;
 }
 .icons {
-  padding:0 5px;
+  padding: 0 5px;
   /* border: 1px solid lime; */
   font-size: 40px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   color: rgb(25, 117, 113);
 }
 .icons > svg {
@@ -106,4 +112,7 @@
 }
 .icons > svg:hover {
   color: red;
+}
+.imp > svg {
+  color: rgb(255, 68, 0);
 }
