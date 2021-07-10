@@ -4,15 +4,6 @@ import { useState } from 'react'
 import { TodoInput } from './component/todoInput'
 import { TodoList } from './component/todoList'
 import { NavBar } from './component/sideNavBar';
-// function getLocalStorage() {
-//   let localStoTodos = localStorage.getItem('myTodos');
-//   if (localStoTodos == null) {
-//     localStoTodos = [];
-//   } else {
-//     localStoTodos = JSON.parse(localStoTodos);
-//   }
-//   return localStoTodos;
-// }
 
 function App() {
   let localStoTodos = localStorage.getItem('myTodos');
